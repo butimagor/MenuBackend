@@ -192,7 +192,9 @@ class MenuBackend {
     MenuItemRef getCurrent() {
       return *current;
     }
-
+   void toRoot() {
+      setCurrent( &getRoot() );
+     }
     void moveBack() {
       setCurrent(current->getBack());
     }
